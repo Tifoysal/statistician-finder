@@ -16,6 +16,12 @@ class WebHomeController extends Controller
     {
         return view('frontend.pages.registration');
     }
+
+    public function statisticianView($id)
+    {
+        $user=User::find($id);
+        return view('frontend.pages.profile',compact('user'));
+    }
     public function webHome()
     {
         $statistician = User::all();

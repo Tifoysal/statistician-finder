@@ -29,7 +29,7 @@ Route::post('/login', [WebHomeController::class, 'login'])->name('user.login');
 Route::get('/search',[WebHomeController::class,'search'])->name('user.search');
 Route::get('/category-wise-product/{category_id}',[WebHomeController::class,'categoryWiseProducts'])->name('category.wise.products');
 Route::get('/product/view/{product_id}',[WebHomeController::class,'productView'])->name('product.view');
-Route::get('/statistician/view/{id}',[WebHomeController::class,'statisticianView]'])->name('statistician.view');
+Route::get('/statistician/view/{id}',[WebHomeController::class,'statisticianView'])->name('statistician.view');
 
 
 Route::group(['middleware' => 'auth'], function () {
